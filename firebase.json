@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "cleanUrls": true,
+    "public": "build",
+    "ignore": [
+      "**/.*"
+    ],
+    "rewrites": [ {
+      "source": "**",
+      "destination": "server/app/index.html"
+    } ],
+    "redirects": [ {
+      "source": "/",
+      "destination": "server/app/index.html",
+      "type": 301
+    }]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}

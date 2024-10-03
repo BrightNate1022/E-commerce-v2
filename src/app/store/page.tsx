@@ -8,7 +8,7 @@ import { getData } from '../backend/apiget'
 // import { Products } from '../backend/apiget'
 
 
-export let Products:any = [] 
+ export let Products:any = [] 
 const placement:Function = () => {
  
 // Products.push(data)
@@ -27,7 +27,7 @@ export let Cart: Array<object> = []
 
 
 
-export class Product {
+ export class Product {
     id:any
     title:any
     price:any
