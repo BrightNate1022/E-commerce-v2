@@ -23,37 +23,3 @@ export default function CartPage() {
     </div>
   )
 }
-
-// export default class Cart extends Component  {
-//     ProductsArray: any
-
-//     constructor(props: any,push:any ) {
-//         super(props)
-        
-//     }
-
-//     componentDidMount(): void {
-//         console.log(ProductsArray)
-//     }
-
-//   render() {
-   
-//     return (
-        
-//       <div>
-        
-//        {ProductsArray.map((item:any) => <div key={item.id} className='container mr-5 mt-5 mb-5 p-14' > 
-//        <Image src={item.image} alt={item.title} width={150} height={150} />
-//        <h1>{item.id} </h1>
-//        <h1>{item.title} </h1>
-//        <h2>${item.price}</h2> 
-//        <p>{item.description}</p>
-//        <h2>{item.category}</h2>
-//        <h2>{item.quantity}</h2>
-//         </div>
-//     )}
-
-//       </div>
-//     )
-//   }
-// }
