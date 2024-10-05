@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
-  bundlePagesRouterDependencies: true,  
-    distDir: '/build',
+  // bundlePagesRouterDependencies: true,  
+  //   distDir: '/build',
 
     typescript: {
   
