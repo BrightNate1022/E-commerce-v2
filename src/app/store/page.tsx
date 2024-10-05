@@ -22,7 +22,7 @@ productsToItems()
               
               <>
               <h1 className='font-bold text-2xl mt-10 mb-2 pr-10 pl-10'>Store</h1>
-              <h2 className='text-xl mt-10 mb-2 pl-10'>You'll have to click another tab once to get products to load here, This has been fixed in other examples</h2>
+              <h2 className='text-xl mt-10 mb-2 pl-10'>You will have to click another tab once to get products to load here, This has been fixed in other examples</h2>
             <div className='columns-1' style={{paddingTop:'3%', paddingLeft:'15%', paddingRight:'15%'}}> 
                 {Products.map((item:any) => 
                 <div key={item.id} className='container text-pretty text-center bg-gray-100/20 border-gray-600 border-4 m-5 pb-12'  >
