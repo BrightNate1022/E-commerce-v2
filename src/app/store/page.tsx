@@ -5,10 +5,12 @@ import React, { Component, useEffect, useRef } from 'react'
 // import { Cart } from '../backend/apiget'
 import Image from 'next/image'
 import { getData } from '../backend/apiget'
+import Cart from '../cart/cartObject'
+import {Product, Productinfo} from '../store/Product'
 // import { Products } from '../backend/apiget'
 
 
- export let Products:any = [] 
+let Products:Array<any> = [] 
 const placement:Function = () => {
  
 // Products.push(data)
@@ -20,40 +22,14 @@ const placement:Function = () => {
 
 
 
-export let Cart: Array<object> = []
 
 
 
 
 
 
- export class Product {
-    id:any
-    title:any
-    price:any
-    description:any
-    image:any
-    category:any
-    quantity : number
-    constructor(id:any , title:any, price:any, description:any, image:any, category:any, quantity:any) {
-        this.id = id
-        this.title = title
-        this.price = price
-        this.description = description
-        this.image = image
-        this.category = category
-        this.quantity = 0
-    }
-}
-interface Productinfo {
-        id: number
-        title: string
-        price: number
-        description: string
-        image: string
-        category: string
-        quantity: number
-      }
+
+
     
 //  let ProductsArray: Array<object> = []
 //  const loading = () =>{ while (Products.length > 0) {
@@ -64,7 +40,7 @@ interface Productinfo {
 //     )
 //   }
 // }  
-const res : Promise<any> = fetch('https://fakestoreapi.com/products')
+const res : Promise<Object> = fetch('https://fakestoreapi.com/products')
   res.then((data:any) => {
     // random = data.json()
     data.json().then((data:any) => {
@@ -73,17 +49,7 @@ const res : Promise<any> = fetch('https://fakestoreapi.com/products')
     console.log((Products))
   })
 export default function Storepage() {
-  function handleClick(item:any)   {
-  handleClick2(item)
-  item.quantity++
-}
 
-function handleClick2(item:any) {
-  if(item.quantity < 1) {
-  Cart.push(item) 
-  console.log("hurray")
-} 
-}
   // useEffect(() => {
 // dosomething()
   // Products = getData()
@@ -131,7 +97,7 @@ function handleClick2(item:any) {
                      
                     console.log(item)
                     console.log(Cart)
-                   handleClick(item)
+                   Cart.HandleClick(item)
                 }}>
                 Add to cart
                 </button>
