@@ -22,7 +22,7 @@ feturedloop()
       <h1 className='font-bold text-2xl mt-10 mb-2 pr-10 text-center'>Home</h1>
       <h2 className='font-bold text-xl mt-10 ml-10'>Featured Products</h2>
       <div className='columns-3' style={{paddingTop:'3%', paddingLeft:'15%', paddingRight:'15%'}}> 
-      {feturedproducts.map((item:any) => <div key={item.id} className='container mr-5 mt-5 mb-5 p-14' > 
+      {feturedproducts.map((item:any) => <div key={item.id} className='container' > 
         <Image src={item.image} alt={item.title} width={150} height={150} />
         <h1>{item.title} </h1>
         <h2>${item.price}</h2> 
