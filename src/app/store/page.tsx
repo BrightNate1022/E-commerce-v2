@@ -1,4 +1,4 @@
-"use client"
+
 import React, { Component, useEffect, useRef } from 'react'
 
 import Image from 'next/image'
@@ -16,7 +16,28 @@ export default function Storepage() {
 getData()
 productsToItems()
 
-
+let transformeditem:any = {
+  id: 0,
+  title: '',
+  price: 0,
+  description: '',
+  image: '',
+  category: '',
+  quantity: 0
+}; 
+function itemtranform(item:any) {
+return (
+{
+id :item.id,
+title : item.title,
+price : item.price,
+description : item.description,
+image : item.image,
+category : item.category,
+quantity : item.quantity
+}
+)
+}
       
             return  (
               
@@ -32,10 +53,12 @@ productsToItems()
                 <h1 className='font-bold mt-2 mb-2'>{`${item.title.substr(0,50)} ...`} </h1>
                 {/* <p>{`${item.description.substr(0,74)} ...`}</p> */}
                 
-                <button className='font-bold text-2xl bg-slate-500/50 p-3 rounded-lg'  onClick={ () => Cart.HandleClick(item) }>
+                {/* <button className='font-bold text-2xl bg-slate-500/50 p-3 rounded-lg'  onClick={ () => Cart.HandleClick(item) }> */}
+                    
+                <Button item={itemtranform(item)}  />
              
-                Add to cart
-                </button>
+              
+                {/* </button> */}
                 </div>
                 )}
                
